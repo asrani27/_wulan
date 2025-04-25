@@ -21,7 +21,6 @@ class LaporanController extends Controller
         if (request()->get('jenis') == '1') {
             $data = Penerima::whereMonth('created_at', $bulan)
                 ->whereYear('created_at', $tahun)
-                ->where('status', null)
                 ->get();
             $pdf = Pdf::loadView('superadmin.laporan.pdf_calon', compact('data', 'bulan', 'tahun'))->setPaper('a4', 'landscape');;
             return $pdf->stream();
