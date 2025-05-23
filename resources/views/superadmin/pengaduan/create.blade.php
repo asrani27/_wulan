@@ -8,7 +8,7 @@
                 <h3 class="card-title">Tambah Data</h3>
 
             </div>
-            <form method="POST" action="/user/ajukan/add">
+            <form method="POST" action="/user/pengaduan/add">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
