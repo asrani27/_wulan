@@ -33,7 +33,7 @@
                     <tbody>
                         @foreach ($data as $key => $item)
                         <tr style="font-size:14px">
-                            <td>{{$key + 1}}</td>
+                            <td>{{$data->firstItem() + $key}}</td>
                             <td>{{$item->penerima}}</td>
                             <td>{{$item->tanggal_lahir}}</td>
                             <td>{{$item->tempat_lahir}}</td>
@@ -73,7 +73,8 @@
                 </table>
             </div>
             <!-- /.card-body -->
-        </div>
+
+        </div> {{$data->links()}}
     </div>
 </div>
 
